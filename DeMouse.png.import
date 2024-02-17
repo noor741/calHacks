@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bve8uxfmhq8d4"
-path="res://.godot/imported/cat.png-d389335c1c7006e0460b77c11cf92d79.ctex"
+uid="uid://cvxp5kciondak"
+path="res://.godot/imported/DeMouse.png-2c444574f871356683835bb22befda54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat.png"
-dest_files=["res://.godot/imported/cat.png-d389335c1c7006e0460b77c11cf92d79.ctex"]
+source_file="res://DeMouse.png"
+dest_files=["res://.godot/imported/DeMouse.png-2c444574f871356683835bb22befda54.ctex"]
 
 [params]
 
