@@ -1,28 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=8 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
+[ext_resource type="Script" path="res://Mouse.gd" id="3_gkvk8"]
+[ext_resource type="Texture2D" uid="uid://bve8uxfmhq8d4" path="res://cat.png" id="3_nvo70"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5btaw"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lsxw5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7nbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxhn0"]
+size = Vector2(24, 14)
 
 [node name="Scene1" type="Node2D"]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
+position = Vector2(7, -1)
 script = ExtResource("1_m1adp")
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="theCat"]
 position = Vector2(0, -27)
 zoom = Vector2(5, 5)
 
 [node name="CatShape" type="CollisionShape2D" parent="theCat"]
-position = Vector2(20, -12)
-shape = SubResource("CircleShape2D_5btaw")
+position = Vector2(20, -11)
+shape = SubResource("CircleShape2D_lsxw5")
 debug_color = Color(0.823529, 0.388235, 0.27451, 0.419608)
 script = ExtResource("1_cn4hv")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="theCat"]
+position = Vector2(29, 4)
+scale = Vector2(0.188368, 0.205247)
+texture = ExtResource("3_nvo70")
+metadata/_edit_group_ = true
 
 [node name="World" type="StaticBody2D" parent="."]
 
 [node name="boundary" type="CollisionShape2D" parent="World"]
 shape = SubResource("WorldBoundaryShape2D_u7nbe")
+
+[node name="Mouse" type="CharacterBody2D" parent="."]
+position = Vector2(-47, -11)
+script = ExtResource("3_gkvk8")
+
+[node name="MouseShape" type="CollisionShape2D" parent="Mouse"]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_lxhn0")
