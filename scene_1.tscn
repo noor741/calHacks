@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c08epncnixyfq"]
+
+[ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
+[ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5btaw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7nbe"]
+
+[node name="Scene1" type="Node2D"]
+
+[node name="theCat" type="CharacterBody2D" parent="."]
+script = ExtResource("1_m1adp")
+
+[node name="Camera2D" type="Camera2D" parent="theCat"]
+position = Vector2(0, -27)
+zoom = Vector2(5, 5)
+
+[node name="CatShape" type="CollisionShape2D" parent="theCat"]
+position = Vector2(20, -12)
+shape = SubResource("CircleShape2D_5btaw")
+debug_color = Color(0.823529, 0.388235, 0.27451, 0.419608)
+script = ExtResource("1_cn4hv")
+
+[node name="World" type="StaticBody2D" parent="."]
+
+[node name="boundary" type="CollisionShape2D" parent="World"]
+shape = SubResource("WorldBoundaryShape2D_u7nbe")
