@@ -29,3 +29,4 @@ func _physics_process(delta):
 		queue_free()
 		get_tree().change_scene_to_file("res://DiedMenu.tscn")
 	move_and_slide()
+

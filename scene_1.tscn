@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=27 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://blq07mceqvnjn" path="res://elon_musk.tscn" id="8_3bsiu"]
 [ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="8_6xgkc"]
 [ext_resource type="PackedScene" uid="uid://dbfst50a0lrj" path="res://mouse_enemy.tscn" id="9_roaak"]
+[ext_resource type="Script" path="res://MuskyRocket.gd" id="10_66fwf"]
 [ext_resource type="Texture2D" uid="uid://cs6henl7524rh" path="res://MuskyRocket.png" id="11_mn6m8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nafng"]
@@ -49,8 +50,8 @@ size = Vector2(70.5, 16)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4t7k"]
-radius = 96.0
-height = 352.0
+radius = 61.0
+height = 326.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4snw"]
 size = Vector2(243, 20)
@@ -1440,12 +1441,12 @@ texture = ExtResource("8_6xgkc")
 metadata/_edit_lock_ = true
 
 [node name="MuskyRocket" type="StaticBody2D" parent="."]
-position = Vector2(48, 103)
-metadata/_edit_group_ = true
+position = Vector2(76, 98)
+script = ExtResource("10_66fwf")
 
 [node name="theRocket" type="CollisionShape2D" parent="MuskyRocket"]
-visible = false
-position = Vector2(2546, -117)
+position = Vector2(2540, -162)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_b4t7k")
 metadata/_edit_group_ = true
 
@@ -1456,9 +1457,19 @@ region_enabled = true
 region_rect = Rect2(265, 62, 333, 415.5)
 metadata/_edit_group_ = true
 
+[node name="Button" type="Button" parent="MuskyRocket"]
+offset_left = 2526.0
+offset_top = -236.0
+offset_right = 2632.0
+offset_bottom = -183.0
+scale = Vector2(0.67999, 0.6)
+text = "Start Engine!"
+
 [node name="Top platform" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top platform"]
 visible = false
 position = Vector2(404.5, -180)
 shape = SubResource("RectangleShape2D_s4snw")
+
+[connection signal="pressed" from="MuskyRocket/Button" to="MuskyRocket" method="_on_button_pressed"]
