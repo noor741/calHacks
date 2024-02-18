@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=17 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://cvxp5kciondak" path="res://DeMouse.png" id="5_ptfj6"]
 [ext_resource type="Script" path="res://MouseSprite.gd" id="7_6id8a"]
+[ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="8_6xgkc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsxw5"]
 
@@ -30,6 +31,7 @@ size = Vector2(43, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eskov"]
 
 [node name="Scene1" type="Node2D"]
+metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 position = Vector2(-181, -3)
@@ -109,3 +111,33 @@ shape = SubResource("RectangleShape2D_eskov")
 offset_left = -230.0
 offset_right = 245.0
 offset_bottom = 29.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(18, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(530, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1042, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1554, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2062, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2574, -92)
+texture = ExtResource("8_6xgkc")
