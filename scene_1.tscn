@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=23 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -40,9 +40,6 @@ size = Vector2(53, 9.75)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cepq0"]
-size = Vector2(391.5, 20)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4t7k"]
 radius = 96.0
 height = 352.0
@@ -83,6 +80,7 @@ metadata/_edit_group_ = true
 
 [node name="Ground" type="CollisionShape2D" parent="World"]
 visible = false
+scale = Vector2(34.92, 1)
 shape = SubResource("WorldBoundaryShape2D_u7nbe")
 debug_color = Color(0.337255, 0.611765, 0.341176, 0.419608)
 
@@ -126,7 +124,7 @@ shape = SubResource("RectangleShape2D_stgkc")
 metadata/_edit_group_ = true
 
 [node name="pillar3" type="StaticBody2D" parent="World"]
-position = Vector2(2555, -2)
+position = Vector2(2562, 6)
 metadata/_edit_group_ = true
 
 [node name="pillarsprite" type="Sprite2D" parent="World/pillar3"]
@@ -147,6 +145,692 @@ metadata/_edit_group_ = true
 visible = false
 position = Vector2(211, -173)
 shape = SubResource("RectangleShape2D_stgkc")
+metadata/_edit_group_ = true
+
+[node name="pillar4" type="StaticBody2D" parent="World"]
+position = Vector2(1388, -1)
+metadata/_edit_group_ = true
+
+[node name="pillarsprite" type="Sprite2D" parent="World/pillar4"]
+position = Vector2(210, -92)
+texture = ExtResource("5_hxrau")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(118, 0, 127, 195)
+metadata/_edit_group_ = true
+
+[node name="Pillar collision" type="CollisionShape2D" parent="World/pillar4"]
+visible = false
+position = Vector2(202.5, -79)
+shape = SubResource("RectangleShape2D_bt3ag")
+metadata/_edit_group_ = true
+
+[node name="top collision" type="CollisionShape2D" parent="World/pillar4"]
+visible = false
+position = Vector2(211, -173)
+shape = SubResource("RectangleShape2D_stgkc")
+metadata/_edit_group_ = true
+
+[node name="pillar5" type="StaticBody2D" parent="World"]
+position = Vector2(2234, 0)
+metadata/_edit_group_ = true
+
+[node name="pillarsprite" type="Sprite2D" parent="World/pillar5"]
+position = Vector2(210, -92)
+texture = ExtResource("5_hxrau")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(118, 0, 127, 195)
+metadata/_edit_group_ = true
+
+[node name="Pillar collision" type="CollisionShape2D" parent="World/pillar5"]
+visible = false
+position = Vector2(202.5, -79)
+shape = SubResource("RectangleShape2D_bt3ag")
+metadata/_edit_group_ = true
+
+[node name="top collision" type="CollisionShape2D" parent="World/pillar5"]
+visible = false
+position = Vector2(211, -173)
+shape = SubResource("RectangleShape2D_stgkc")
+metadata/_edit_group_ = true
+
+[node name="Panel1" type="Panel" parent="World"]
+offset_left = -230.0
+offset_right = 245.0
+offset_bottom = 29.0
+
+[node name="Floor1" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(25.5, 14.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor2" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(74, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor3" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(123, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor4" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(172, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor5" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(220.5, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor6" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(269, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor7" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(318, 13.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor8" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(367, 13.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor9" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(414.5, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor10" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(463.5, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor11" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(512.5, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(997, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(1045, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(1093, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(1141, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2361.25, 12)
+scale = Vector2(1.03125, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2410, 13)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2457, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor20" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2551, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor21" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2600, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor22" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2649, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor23" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2697.5, 16.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor24" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2791.5, 17.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor25" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2840.5, 18.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor26" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2889.5, 18.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor27" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2889.5, 18.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor28" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2937, 19)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor29" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2986, 20)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor30" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(3034, 21)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor31" type="Sprite2D" parent="World/Panel1"]
+position = Vector2(2745, 17)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Panel2" type="Panel" parent="World"]
+offset_left = 281.0
+offset_top = -189.0
+offset_right = 671.0
+offset_bottom = -161.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Panel5" type="Panel" parent="World"]
+offset_left = 1325.0
+offset_top = -1.0
+offset_right = 1715.0
+offset_bottom = 27.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor20" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Panel6" type="Panel" parent="World"]
+offset_left = 1721.0
+offset_top = -2.0
+offset_right = 2111.0
+offset_bottom = 26.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor20" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor21" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor22" type="Sprite2D" parent="World/Panel6"]
+position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Panel4" type="Panel" parent="World"]
+offset_left = 934.0
+offset_right = 1324.0
+offset_bottom = 28.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel4"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Panel3" type="Panel" parent="World"]
+offset_left = 304.0
+offset_right = 694.0
+offset_bottom = 25.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="World/Panel3"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 metadata/_edit_group_ = true
 
 [node name="Platforms" type="StaticBody2D" parent="."]
@@ -229,108 +913,26 @@ region_enabled = true
 region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
-[node name="Panel1" type="Panel" parent="."]
-offset_left = -230.0
-offset_right = 245.0
-offset_bottom = 29.0
-
-[node name="Floor1" type="Sprite2D" parent="Panel1"]
-position = Vector2(25.5, 14.75)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor2" type="Sprite2D" parent="Panel1"]
-position = Vector2(74, 15)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor3" type="Sprite2D" parent="Panel1"]
-position = Vector2(123, 14)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor4" type="Sprite2D" parent="Panel1"]
-position = Vector2(172, 14)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor5" type="Sprite2D" parent="Panel1"]
-position = Vector2(220.5, 14)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor6" type="Sprite2D" parent="Panel1"]
-position = Vector2(269, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor7" type="Sprite2D" parent="Panel1"]
-position = Vector2(318, 13.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor8" type="Sprite2D" parent="Panel1"]
-position = Vector2(367, 13.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor9" type="Sprite2D" parent="Panel1"]
-position = Vector2(414.5, 15.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor10" type="Sprite2D" parent="Panel1"]
-position = Vector2(463.5, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
-[node name="Floor11" type="Sprite2D" parent="Panel1"]
-position = Vector2(512.5, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-
 [node name="Mobs" type="Node" parent="."]
 
-[node name="MouseEnemy" parent="Mobs" instance=ExtResource("9_roaak")]
+[node name="MouseEnemy1" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(438, -205)
+position = Vector2(424, -26)
 
 [node name="MouseEnemy3" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(774, -24)
+position = Vector2(494, -12)
 
 [node name="MouseEnemy2" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(635, -35)
+position = Vector2(582, -21)
 
 [node name="MouseEnemy4" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(884, -45)
+position = Vector2(648, -17)
 
 [node name="ElonMusk" parent="Mobs" instance=ExtResource("8_3bsiu")]
-position = Vector2(2255, -51)
+position = Vector2(2022, -56)
 
 [node name="background" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_gjxbl")
@@ -488,86 +1090,8 @@ theme_override_font_sizes/font_size = 20
 text = "HP:"
 script = ExtResource("8_6ri86")
 
-[node name="Panel2" type="Panel" parent="."]
-offset_left = 283.0
-offset_top = -188.0
-offset_right = 673.0
-offset_bottom = -160.0
-metadata/_edit_group_ = true
-
-[node name="Floor12" type="Sprite2D" parent="Panel2"]
-position = Vector2(25.5, 15.75)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor13" type="Sprite2D" parent="Panel2"]
-position = Vector2(74, 16)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor14" type="Sprite2D" parent="Panel2"]
-position = Vector2(123, 15)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor15" type="Sprite2D" parent="Panel2"]
-position = Vector2(172, 15)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor16" type="Sprite2D" parent="Panel2"]
-position = Vector2(220.5, 15)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor17" type="Sprite2D" parent="Panel2"]
-position = Vector2(269, 15.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor18" type="Sprite2D" parent="Panel2"]
-position = Vector2(318, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor19" type="Sprite2D" parent="Panel2"]
-position = Vector2(367, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(478.25, -179)
-shape = SubResource("RectangleShape2D_cepq0")
-
 [node name="MuskyRocket" type="StaticBody2D" parent="."]
-position = Vector2(-53, 103)
+position = Vector2(48, 103)
 metadata/_edit_group_ = true
 
 [node name="theRocket" type="CollisionShape2D" parent="MuskyRocket"]
@@ -577,7 +1101,7 @@ shape = SubResource("CapsuleShape2D_b4t7k")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MuskyRocket"]
-position = Vector2(2561, -199)
+position = Vector2(2563, -190)
 texture = ExtResource("11_mn6m8")
 region_enabled = true
 region_rect = Rect2(265, 62, 333, 415.5)
