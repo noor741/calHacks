@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
-[ext_resource type="Texture2D" uid="uid://1fwhjicgqxep" path="res://cat.png" id="3_nvo70"]
+[ext_resource type="Texture2D" uid="uid://d0grgqr246gbc" path="res://cat.png" id="3_nvo70"]
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://ik4j6ee1135o" path="res://gothicvania church/assets/environment/columns.png" id="5_hxrau"]
 [ext_resource type="Texture2D" uid="uid://82v3aenyda1f" path="res://gothicvania church/assets/environment/tileset.png" id="6_5sna0"]
@@ -1123,3 +1123,18 @@ visible = false
 position = Vector2(404.5, -175)
 shape = SubResource("RectangleShape2D_jokd8")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -162.0
+offset_right = 18.0
+offset_bottom = -122.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Control"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Meowdy, Pardner!"
+metadata/_edit_group_ = true

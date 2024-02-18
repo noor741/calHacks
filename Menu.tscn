@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn3rhaan5gu3n"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_jk4qw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jk4qw")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 115.0
+offset_right = 725.0
+offset_bottom = 238.0
+tooltip_text = "Good luck Pardner!"
+text = "Start Game"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 388.0
+offset_right = 726.0
+offset_bottom = 511.0
+tooltip_text = "What are you scared of?"
+text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="quit" to="quit" method="_on_pressed"]
