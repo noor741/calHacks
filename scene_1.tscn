@@ -1,15 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=14 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
-[ext_resource type="Script" path="res://Mouse.gd" id="3_gkvk8"]
 [ext_resource type="Texture2D" uid="uid://1fwhjicgqxep" path="res://cat.png" id="3_nvo70"]
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
-[ext_resource type="Texture2D" uid="uid://cvxp5kciondak" path="res://DeMouse.png" id="5_ptfj6"]
-[ext_resource type="Script" path="res://MouseSprite.gd" id="7_6id8a"]
 [ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="8_6xgkc"]
+[ext_resource type="PackedScene" uid="uid://dbfst50a0lrj" path="res://mouse_enemy.tscn" id="9_roaak"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lsxw5"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nafng"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7nbe"]
 
@@ -18,9 +16,6 @@ size = Vector2(20, 206.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kny7"]
 size = Vector2(20, 143.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxhn0"]
-size = Vector2(43, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dskmj"]
 size = Vector2(43, 13)
@@ -45,8 +40,8 @@ zoom = Vector2(5, 5)
 metadata/_edit_group_ = true
 
 [node name="CatShape" type="CollisionShape2D" parent="theCat"]
-position = Vector2(20, -11)
-shape = SubResource("CircleShape2D_lsxw5")
+position = Vector2(20, -15)
+shape = SubResource("CapsuleShape2D_nafng")
 debug_color = Color(0.823529, 0.388235, 0.27451, 0.419608)
 script = ExtResource("1_cn4hv")
 metadata/_edit_group_ = true
@@ -75,23 +70,124 @@ shape = SubResource("RectangleShape2D_476os")
 position = Vector2(233, -72.25)
 shape = SubResource("RectangleShape2D_6kny7")
 
-[node name="Mouse" type="CharacterBody2D" parent="."]
-position = Vector2(50, -11)
-script = ExtResource("3_gkvk8")
-metadata/_edit_group_ = true
+[node name="Sprite2D" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(18, -92)
+texture = ExtResource("8_6xgkc")
 
-[node name="MouseShape" type="CollisionShape2D" parent="Mouse"]
-position = Vector2(8.5, 3)
-shape = SubResource("RectangleShape2D_lxhn0")
-debug_color = Color(1, 1, 1, 0)
-metadata/_edit_group_ = true
+[node name="Sprite2D19" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(-493, -93)
+texture = ExtResource("8_6xgkc")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mouse"]
-position = Vector2(8, 15)
-scale = Vector2(0.0529784, 0.0495887)
-texture = ExtResource("5_ptfj6")
-script = ExtResource("7_6id8a")
-metadata/_edit_group_ = true
+[node name="Sprite2D13" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(18, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(-484, 144)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(526, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1038, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D16" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1550, 146)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D17" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2062, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D18" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2574, 148)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(18, -330)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D20" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(-481, -332)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(526, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1033, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1545, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2056, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2568, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(530, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1042, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(1554, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D5" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2062, -92)
+texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="World"]
+z_index = -1
+position = Vector2(2574, -92)
+texture = ExtResource("8_6xgkc")
 
 [node name="Platforms" type="StaticBody2D" parent="."]
 
@@ -112,104 +208,16 @@ offset_left = -230.0
 offset_right = 245.0
 offset_bottom = 29.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(18, -92)
-texture = ExtResource("8_6xgkc")
+[node name="Mobs" type="Node" parent="."]
 
-[node name="Sprite2D13" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(18, 147)
-texture = ExtResource("8_6xgkc")
-flip_v = true
+[node name="MouseEnemy" parent="Mobs" instance=ExtResource("9_roaak")]
+position = Vector2(495, -22)
 
-[node name="Sprite2D14" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(526, 147)
-texture = ExtResource("8_6xgkc")
-flip_v = true
+[node name="MouseEnemy3" parent="Mobs" instance=ExtResource("9_roaak")]
+position = Vector2(788, -25)
 
-[node name="Sprite2D15" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1038, 147)
-texture = ExtResource("8_6xgkc")
-flip_v = true
+[node name="MouseEnemy2" parent="Mobs" instance=ExtResource("9_roaak")]
+position = Vector2(635, -35)
 
-[node name="Sprite2D16" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1550, 146)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D17" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2062, 147)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D18" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2574, 148)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D7" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(18, -330)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D8" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(526, -331)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D9" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1033, -331)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D10" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1545, -331)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D11" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2056, -331)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D12" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2568, -331)
-texture = ExtResource("8_6xgkc")
-flip_v = true
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(530, -92)
-texture = ExtResource("8_6xgkc")
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1042, -92)
-texture = ExtResource("8_6xgkc")
-
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1554, -92)
-texture = ExtResource("8_6xgkc")
-
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2062, -92)
-texture = ExtResource("8_6xgkc")
-
-[node name="Sprite2D6" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(2574, -92)
-texture = ExtResource("8_6xgkc")
+[node name="MouseEnemy4" parent="Mobs" instance=ExtResource("9_roaak")]
+position = Vector2(884, -45)
