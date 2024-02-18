@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=16 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -12,8 +12,22 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u7nbe"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_476os"]
+size = Vector2(20, 206.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kny7"]
+size = Vector2(20, 143.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxhn0"]
 size = Vector2(43, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dskmj"]
+size = Vector2(43, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbe3r"]
+size = Vector2(43, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eskov"]
 
 [node name="Scene1" type="Node2D"]
 
@@ -49,6 +63,14 @@ metadata/_edit_group_ = true
 shape = SubResource("WorldBoundaryShape2D_u7nbe")
 debug_color = Color(0.337255, 0.611765, 0.341176, 0.419608)
 
+[node name="Pillar1" type="CollisionShape2D" parent="World"]
+position = Vector2(-225, -103.75)
+shape = SubResource("RectangleShape2D_476os")
+
+[node name="Pillar2" type="CollisionShape2D" parent="World"]
+position = Vector2(233, -72.25)
+shape = SubResource("RectangleShape2D_6kny7")
+
 [node name="Mouse" type="CharacterBody2D" parent="."]
 position = Vector2(50, -13)
 script = ExtResource("3_gkvk8")
@@ -66,3 +88,22 @@ scale = Vector2(0.0529784, 0.0495887)
 texture = ExtResource("5_ptfj6")
 script = ExtResource("7_6id8a")
 metadata/_edit_group_ = true
+
+[node name="Platforms" type="StaticBody2D" parent="."]
+
+[node name="Platform1" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(83, -42)
+shape = SubResource("RectangleShape2D_dskmj")
+
+[node name="Platform2" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(155, -75)
+shape = SubResource("RectangleShape2D_cbe3r")
+
+[node name="Platform3" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(201, -109)
+shape = SubResource("RectangleShape2D_eskov")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -230.0
+offset_right = 245.0
+offset_bottom = 29.0
