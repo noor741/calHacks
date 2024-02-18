@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=24 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -6,9 +6,11 @@
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://ik4j6ee1135o" path="res://gothicvania church/assets/environment/columns.png" id="5_hxrau"]
 [ext_resource type="Texture2D" uid="uid://82v3aenyda1f" path="res://gothicvania church/assets/environment/tileset.png" id="6_5sna0"]
+[ext_resource type="PackedScene" uid="uid://blq07mceqvnjn" path="res://elon_musk.tscn" id="8_3bsiu"]
 [ext_resource type="Script" path="res://HealthPoints.gd" id="8_6ri86"]
 [ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="8_6xgkc"]
 [ext_resource type="PackedScene" uid="uid://dbfst50a0lrj" path="res://mouse_enemy.tscn" id="9_roaak"]
+[ext_resource type="Texture2D" uid="uid://cs6henl7524rh" path="res://MuskyRocket.png" id="11_mn6m8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nafng"]
 
@@ -40,6 +42,10 @@ size = Vector2(53, 9.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cepq0"]
 size = Vector2(391.5, 20)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4t7k"]
+radius = 96.0
+height = 352.0
 
 [node name="Scene1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1292.0]
@@ -114,6 +120,30 @@ shape = SubResource("RectangleShape2D_bt3ag")
 metadata/_edit_group_ = true
 
 [node name="top collision" type="CollisionShape2D" parent="World/pillar2"]
+visible = false
+position = Vector2(211, -173)
+shape = SubResource("RectangleShape2D_stgkc")
+metadata/_edit_group_ = true
+
+[node name="pillar3" type="StaticBody2D" parent="World"]
+position = Vector2(2555, -2)
+metadata/_edit_group_ = true
+
+[node name="pillarsprite" type="Sprite2D" parent="World/pillar3"]
+position = Vector2(210, -92)
+texture = ExtResource("5_hxrau")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(118, 0, 127, 195)
+metadata/_edit_group_ = true
+
+[node name="Pillar collision" type="CollisionShape2D" parent="World/pillar3"]
+visible = false
+position = Vector2(202.5, -79)
+shape = SubResource("RectangleShape2D_bt3ag")
+metadata/_edit_group_ = true
+
+[node name="top collision" type="CollisionShape2D" parent="World/pillar3"]
 visible = false
 position = Vector2(211, -173)
 shape = SubResource("RectangleShape2D_stgkc")
@@ -289,7 +319,7 @@ position = Vector2(438, -205)
 
 [node name="MouseEnemy3" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(788, -25)
+position = Vector2(774, -24)
 
 [node name="MouseEnemy2" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
@@ -298,6 +328,9 @@ position = Vector2(635, -35)
 [node name="MouseEnemy4" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
 position = Vector2(884, -45)
+
+[node name="ElonMusk" parent="Mobs" instance=ExtResource("8_3bsiu")]
+position = Vector2(2255, -51)
 
 [node name="background" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_gjxbl")
@@ -327,6 +360,7 @@ z_index = -1
 position = Vector2(-484, 144)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D14" type="Sprite2D" parent="background"]
 z_index = -1
@@ -340,24 +374,28 @@ z_index = -1
 position = Vector2(1038, 147)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D16" type="Sprite2D" parent="background"]
 z_index = -1
 position = Vector2(1550, 146)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D17" type="Sprite2D" parent="background"]
 z_index = -1
 position = Vector2(2062, 147)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D18" type="Sprite2D" parent="background"]
 z_index = -1
 position = Vector2(2574, 148)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D7" type="Sprite2D" parent="background"]
 z_index = -1
@@ -371,6 +409,7 @@ z_index = -1
 position = Vector2(-481, -332)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D8" type="Sprite2D" parent="background"]
 z_index = -1
@@ -398,12 +437,14 @@ z_index = -1
 position = Vector2(2056, -331)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D12" type="Sprite2D" parent="background"]
 z_index = -1
 position = Vector2(2568, -331)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="background"]
 z_index = -1
@@ -427,11 +468,13 @@ metadata/_edit_lock_ = true
 z_index = -1
 position = Vector2(2062, -92)
 texture = ExtResource("8_6xgkc")
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D6" type="Sprite2D" parent="background"]
 z_index = -1
 position = Vector2(2574, -92)
 texture = ExtResource("8_6xgkc")
+metadata/_edit_lock_ = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -522,3 +565,20 @@ metadata/_edit_group_ = true
 visible = false
 position = Vector2(478.25, -179)
 shape = SubResource("RectangleShape2D_cepq0")
+
+[node name="MuskyRocket" type="StaticBody2D" parent="."]
+position = Vector2(-53, 103)
+metadata/_edit_group_ = true
+
+[node name="theRocket" type="CollisionShape2D" parent="MuskyRocket"]
+visible = false
+position = Vector2(2546, -117)
+shape = SubResource("CapsuleShape2D_b4t7k")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MuskyRocket"]
+position = Vector2(2561, -199)
+texture = ExtResource("11_mn6m8")
+region_enabled = true
+region_rect = Rect2(265, 62, 333, 415.5)
+metadata/_edit_group_ = true

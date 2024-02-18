@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://blq07mceqvnjn"]
+
+[ext_resource type="Script" path="res://ElonMusk.gd" id="1_6ybsk"]
+[ext_resource type="Texture2D" uid="uid://cghpjagl4hohl" path="res://Big'OlMusky.png" id="2_spdqv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp0o"]
+radius = 39.0
+height = 120.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hofdd"]
+radius = 195.064
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6tq"]
+size = Vector2(91, 96)
+
+[node name="ElonMusk" type="CharacterBody2D"]
+script = ExtResource("1_6ybsk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_lvp0o")
+
+[node name="MuskSprite" type="Sprite2D" parent="."]
+position = Vector2(-0.999989, 3)
+scale = Vector2(0.264669, 0.246241)
+texture = ExtResource("2_spdqv")
+region_enabled = true
+region_rect = Rect2(355.5, 133, 606, 532.5)
+
+[node name="CatDetection" type="Area2D" parent="."]
+
+[node name="Collision Field" type="CollisionShape2D" parent="CatDetection"]
+shape = SubResource("CircleShape2D_hofdd")
+
+[node name="KillTheCat" type="Area2D" parent="."]
+
+[node name="KillField" type="CollisionShape2D" parent="KillTheCat"]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_8n6tq")
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="CatDetection" to="." method="_on_cat_detection_body_entered"]
+[connection signal="body_exited" from="CatDetection" to="." method="_on_cat_detection_body_exited"]
+[connection signal="body_entered" from="KillTheCat" to="." method="_on_kill_the_cat_body_entered"]
+[connection signal="body_exited" from="KillTheCat" to="." method="_on_kill_the_cat_body_exited"]
