@@ -24,5 +24,9 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if health <= 0:
+		queue_free()
+		#get_tree().change_scene_to_file() #must add scene
 
 	move_and_slide()

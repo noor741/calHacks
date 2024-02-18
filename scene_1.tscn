@@ -58,7 +58,7 @@ metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(998, -156)
+position = Vector2(1561, -200)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -505,9 +505,9 @@ region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 metadata/_edit_group_ = true
 
 [node name="Panel5" type="Panel" parent="World"]
-offset_left = 1325.0
+offset_left = 1331.0
 offset_top = -1.0
-offset_right = 1715.0
+offset_right = 1721.0
 offset_bottom = 27.0
 metadata/_edit_group_ = true
 
@@ -577,6 +577,14 @@ metadata/_edit_group_ = true
 
 [node name="Floor20" type="Sprite2D" parent="World/Panel5"]
 position = Vector2(949, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor21" type="Sprite2D" parent="World/Panel5"]
+position = Vector2(17, 16)
 scale = Vector2(1.02083, 0.730769)
 texture = ExtResource("6_5sna0")
 region_enabled = true
