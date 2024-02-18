@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbfst50a0lrj"]
+[gd_scene load_steps=7 format=3 uid="uid://dbfst50a0lrj"]
 
 [ext_resource type="Script" path="res://MouseEnemy.gd" id="1_hs8g7"]
 [ext_resource type="Texture2D" uid="uid://cvxp5kciondak" path="res://DeMouse.png" id="2_yjtlb"]
@@ -10,7 +10,10 @@ size = Vector2(27, 17.5)
 radius = 124.064
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_61rn0"]
-radius = 9.01388
+radius = 10.0125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1tv8"]
+size = Vector2(39, 10)
 
 [node name="MouseEnemy" type="CharacterBody2D"]
 position = Vector2(101, -14)
@@ -41,16 +44,25 @@ shape = SubResource("CircleShape2D_kf00t")
 one_way_collision_margin = 0.0
 metadata/_edit_group_ = true
 
-[node name="KillTheCat" type="Area2D" parent="."]
-position = Vector2(-35, -6)
+[node name="KilledByCat" type="Area2D" parent="."]
+position = Vector2(-33, -6)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillTheCat"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KilledByCat"]
 position = Vector2(8, 8.5)
 shape = SubResource("CircleShape2D_61rn0")
 one_way_collision_margin = 0.0
 
+[node name="DamageTheCat" type="Area2D" parent="."]
+position = Vector2(-35, -6)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageTheCat"]
+position = Vector2(13.5, 9)
+shape = SubResource("RectangleShape2D_q1tv8")
+one_way_collision_margin = 0.0
+
 [connection signal="body_entered" from="CatDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="CatDetection" to="." method="_on_player_detection_body_exited"]
-[connection signal="body_entered" from="KillTheCat" to="." method="_on_kill_the_cat_body_entered"]
+[connection signal="body_entered" from="KilledByCat" to="." method="_on_kill_the_cat_body_entered"]
+[connection signal="body_entered" from="DamageTheCat" to="." method="_on_damage_the_cat_body_entered"]

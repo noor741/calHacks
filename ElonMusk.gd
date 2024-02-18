@@ -5,27 +5,33 @@ var chase = false
 var SPEED = 200
 
 func _physics_process(delta):
-	#Gravity for ElonMusk enemy
+	# Gravity for ElonMusk enemy
 	velocity.y += gravity * delta
-	if chase == true:
-		theCat = get_node("../../theCat")
-		var direction = ( theCat.position - self.position).normalized()
-		if direction.x > 0 :
-			get_node("MouseSprite").flip_h = false
+
+	if chase:
+		var theCat = get_node("theCat")  
+		var direction = (theCat.global_position - global_position).normalized()
+
+		if direction.x > 0:
+			$MuskSprite.flip_h = false  # Use $ shortcut to reference child nodes directly
 		else:
-			get_node("MouseSprite").flip_h = true
+			$MuskSprite.flip_h = true
+
 		velocity.x = direction.x * SPEED
 	else:
 		velocity.x = 0
+
 	move_and_slide()
-	
-func _on_player_detection_body_entered(body):
+
+func _on_cat_detection_body_entered(body):
 	if body.name == "theCat":
 		chase = true
 
-func _on_player_detection_body_exited(body):
+
+func _on_cat_detection_body_exited(body):
 	if body.name == "theCat":
-		chase = false
+			chase = false
+
 
 
 func _on_kill_the_cat_body_entered(body):
