@@ -27,6 +27,10 @@ func _physics_process(delta):
 		
 	if health <= 0:
 		queue_free()
+<<<<<<< HEAD
+		get_tree().change_scene_to_file("res://DiedMenu.tscn")
+=======
 		get_tree().change_scene_to_file("res://Menu.tscn")
+>>>>>>> 6567077b4ecf8b32abd78f9eba36e7001be96407
 
 	move_and_slide()
