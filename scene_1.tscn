@@ -122,8 +122,7 @@ metadata/_edit_group_ = true
 [node name="Platforms" type="StaticBody2D" parent="."]
 
 [node name="Platform1" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(-5, -42)
-scale = Vector2(1, 0.72)
+position = Vector2(3.375, -58)
 shape = SubResource("RectangleShape2D_dskmj")
 metadata/_edit_group_ = true
 
@@ -162,20 +161,20 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform4" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(-55, -42)
+position = Vector2(-56, -42)
 shape = SubResource("RectangleShape2D_t4krc")
 metadata/_edit_group_ = true
 
 [node name="Plat4Sprite" type="Sprite2D" parent="Platforms/Platform4"]
 position = Vector2(0.5, 0.0062511)
-scale = Vector2(1.70968, 0.362176)
+scale = Vector2(1.70968, 0.322177)
 texture = ExtResource("6_5sna0")
 region_enabled = true
 region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform5" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(-32, -241)
+position = Vector2(141, -183)
 shape = SubResource("RectangleShape2D_t4krc")
 metadata/_edit_group_ = true
 
@@ -188,7 +187,7 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform6" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(-33, -216)
+position = Vector2(73, -142)
 shape = SubResource("RectangleShape2D_t4krc")
 metadata/_edit_group_ = true
 
