@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbfst50a0lrj"]
+
+[ext_resource type="Script" path="res://MouseEnemy.gd" id="1_hs8g7"]
+[ext_resource type="Texture2D" uid="uid://cvxp5kciondak" path="res://DeMouse.png" id="2_yjtlb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jte0n"]
+size = Vector2(60, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kf00t"]
+radius = 124.064
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8goev"]
+size = Vector2(65, 32)
+
+[node name="MouseEnemy" type="CharacterBody2D"]
+position = Vector2(-1, -16)
+script = ExtResource("1_hs8g7")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_jte0n")
+metadata/_edit_group_ = true
+
+[node name="MouseSprite" type="Sprite2D" parent="."]
+position = Vector2(-5, 2)
+scale = Vector2(0.109651, 0.12366)
+texture = ExtResource("2_yjtlb")
+region_enabled = true
+region_rect = Rect2(361.5, 183, 908, 343)
+metadata/_edit_group_ = true
+
+[node name="CatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatDetection"]
+visible = false
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_kf00t")
+one_way_collision_margin = 0.0
+metadata/_edit_group_ = true
+
+[node name="KillTheCat" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillTheCat"]
+visible = false
+position = Vector2(7.5, 0)
+shape = SubResource("RectangleShape2D_8goev")
+one_way_collision_margin = 0.0
+metadata/_edit_group_ = true
+
+[connection signal="body_entered" from="CatDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="CatDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="KillTheCat" to="." method="_on_kill_the_cat_body_entered"]
