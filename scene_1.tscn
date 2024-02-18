@@ -1142,6 +1142,7 @@ offset_bottom = -122.0
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Meowdy, Pardner!"
