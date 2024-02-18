@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvxp5kciondak" path="res://DeMouse.png" id="2_yjtlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jte0n"]
-size = Vector2(60, 28)
+size = Vector2(45, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kf00t"]
 radius = 124.064
@@ -13,19 +13,19 @@ radius = 124.064
 size = Vector2(65, 32)
 
 [node name="MouseEnemy" type="CharacterBody2D"]
-position = Vector2(-1, -16)
+position = Vector2(5, -18)
 script = ExtResource("1_hs8g7")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(3, -1)
+position = Vector2(-10.5, 5.5)
 shape = SubResource("RectangleShape2D_jte0n")
 metadata/_edit_group_ = true
 
 [node name="MouseSprite" type="Sprite2D" parent="."]
-position = Vector2(-5, 2)
-scale = Vector2(0.109651, 0.12366)
+position = Vector2(-17.8907, 7.60385)
+scale = Vector2(0.081257, 0.0909845)
 texture = ExtResource("2_yjtlb")
 region_enabled = true
 region_rect = Rect2(361.5, 183, 908, 343)

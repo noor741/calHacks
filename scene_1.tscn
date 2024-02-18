@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=21 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
 [ext_resource type="Texture2D" uid="uid://1fwhjicgqxep" path="res://cat.png" id="3_nvo70"]
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://ik4j6ee1135o" path="res://gothicvania church/assets/environment/columns.png" id="5_hxrau"]
+[ext_resource type="Texture2D" uid="uid://82v3aenyda1f" path="res://gothicvania church/assets/environment/tileset.png" id="6_5sna0"]
+[ext_resource type="Script" path="res://HealthPoints.gd" id="8_6ri86"]
 [ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="8_6xgkc"]
 [ext_resource type="PackedScene" uid="uid://dbfst50a0lrj" path="res://mouse_enemy.tscn" id="9_roaak"]
 
@@ -23,7 +25,7 @@ size = Vector2(45, 152)
 size = Vector2(114, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dskmj"]
-size = Vector2(45.5, 13)
+size = Vector2(48.75, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbe3r"]
 size = Vector2(52.5, 11)
@@ -32,14 +34,19 @@ size = Vector2(52.5, 11)
 size = Vector2(56, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4krc"]
-size = Vector2(53, 9.5)
+size = Vector2(53, 9.75)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cepq0"]
+size = Vector2(391.5, 20)
 
 [node name="Scene1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(-181, -3)
+position = Vector2(-164, -6)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -115,39 +122,171 @@ metadata/_edit_group_ = true
 [node name="Platforms" type="StaticBody2D" parent="."]
 
 [node name="Platform1" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(5, -58)
+position = Vector2(-5, -42)
+scale = Vector2(1, 0.72)
 shape = SubResource("RectangleShape2D_dskmj")
+metadata/_edit_group_ = true
+
+[node name="Plat1Sprite" type="Sprite2D" parent="Platforms/Platform1"]
+position = Vector2(0.124999, -0.5)
+scale = Vector2(1.58065, 0.483871)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
 
 [node name="Platform2" type="CollisionShape2D" parent="Platforms"]
 position = Vector2(79, -84)
 shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform2"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
 
 [node name="Platform3" type="CollisionShape2D" parent="Platforms"]
 position = Vector2(157, -110)
 shape = SubResource("RectangleShape2D_eskov")
+metadata/_edit_group_ = true
+
+[node name="Plat3Sprite" type="Sprite2D" parent="Platforms/Platform3"]
+position = Vector2(7.15256e-07, 0.506249)
+scale = Vector2(1.80645, 0.418952)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
 
 [node name="Platform4" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(-56, -31)
+position = Vector2(-55, -42)
 shape = SubResource("RectangleShape2D_t4krc")
+metadata/_edit_group_ = true
+
+[node name="Plat4Sprite" type="Sprite2D" parent="Platforms/Platform4"]
+position = Vector2(0.5, 0.0062511)
+scale = Vector2(1.70968, 0.362176)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
 
 [node name="Platform5" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(141, -183)
+position = Vector2(-32, -241)
 shape = SubResource("RectangleShape2D_t4krc")
+metadata/_edit_group_ = true
+
+[node name="Plat5Sprite" type="Sprite2D" parent="Platforms/Platform5"]
+position = Vector2(2.6226e-06, 0.506247)
+scale = Vector2(1.74194, 0.354435)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
 
 [node name="Platform6" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(73, -142)
+position = Vector2(-33, -216)
 shape = SubResource("RectangleShape2D_t4krc")
+metadata/_edit_group_ = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Plat6Sprite" type="Sprite2D" parent="Platforms/Platform6"]
+position = Vector2(0.5, 0.506247)
+scale = Vector2(1.70968, 0.354435)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Panel1" type="Panel" parent="."]
 offset_left = -230.0
 offset_right = 245.0
 offset_bottom = 29.0
+
+[node name="Floor1" type="Sprite2D" parent="Panel1"]
+position = Vector2(25.5, 14.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor2" type="Sprite2D" parent="Panel1"]
+position = Vector2(74, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor3" type="Sprite2D" parent="Panel1"]
+position = Vector2(123, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor4" type="Sprite2D" parent="Panel1"]
+position = Vector2(172, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor5" type="Sprite2D" parent="Panel1"]
+position = Vector2(220.5, 14)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor6" type="Sprite2D" parent="Panel1"]
+position = Vector2(269, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor7" type="Sprite2D" parent="Panel1"]
+position = Vector2(318, 13.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor8" type="Sprite2D" parent="Panel1"]
+position = Vector2(367, 13.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor9" type="Sprite2D" parent="Panel1"]
+position = Vector2(414.5, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor10" type="Sprite2D" parent="Panel1"]
+position = Vector2(463.5, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+
+[node name="Floor11" type="Sprite2D" parent="Panel1"]
+position = Vector2(512.5, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 
 [node name="Mobs" type="Node" parent="."]
 
 [node name="MouseEnemy" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(495, -22)
+position = Vector2(438, -205)
 
 [node name="MouseEnemy3" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
@@ -162,6 +301,7 @@ z_index = 1
 position = Vector2(884, -45)
 
 [node name="background" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_gjxbl")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="background"]
@@ -181,6 +321,7 @@ z_index = -1
 position = Vector2(18, 147)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D21" type="Sprite2D" parent="background"]
 z_index = -1
@@ -193,6 +334,7 @@ z_index = -1
 position = Vector2(526, 147)
 texture = ExtResource("8_6xgkc")
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D15" type="Sprite2D" parent="background"]
 z_index = -1
@@ -291,3 +433,93 @@ texture = ExtResource("8_6xgkc")
 z_index = -1
 position = Vector2(2574, -92)
 texture = ExtResource("8_6xgkc")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HealthPoints" type="Label" parent="UI"]
+offset_left = -237.0
+offset_top = -187.0
+offset_right = -197.0
+offset_bottom = -159.0
+theme_override_colors/font_color = Color(0.960784, 0.960784, 0.960784, 1)
+theme_override_font_sizes/font_size = 20
+text = "HP:"
+script = ExtResource("8_6ri86")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 283.0
+offset_top = -188.0
+offset_right = 673.0
+offset_bottom = -160.0
+metadata/_edit_group_ = true
+
+[node name="Floor12" type="Sprite2D" parent="Panel2"]
+position = Vector2(25.5, 15.75)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor13" type="Sprite2D" parent="Panel2"]
+position = Vector2(74, 16)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor14" type="Sprite2D" parent="Panel2"]
+position = Vector2(123, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor15" type="Sprite2D" parent="Panel2"]
+position = Vector2(172, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor16" type="Sprite2D" parent="Panel2"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="Panel2"]
+position = Vector2(269, 15.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor18" type="Sprite2D" parent="Panel2"]
+position = Vector2(318, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor19" type="Sprite2D" parent="Panel2"]
+position = Vector2(367, 14.25)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(478.25, -179)
+shape = SubResource("RectangleShape2D_cepq0")
