@@ -24,7 +24,7 @@ height = 214.0
 size = Vector2(45, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stgkc"]
-size = Vector2(114, 8)
+size = Vector2(114, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dskmj"]
 size = Vector2(48.75, 13)
@@ -130,8 +130,7 @@ shape = SubResource("RectangleShape2D_bt3ag")
 metadata/_edit_group_ = true
 
 [node name="top collision" type="CollisionShape2D" parent="World/pillar2"]
-visible = false
-position = Vector2(211, -173)
+position = Vector2(211, -178.5)
 shape = SubResource("RectangleShape2D_stgkc")
 metadata/_edit_group_ = true
 
