@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=26 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -38,18 +38,27 @@ size = Vector2(56, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4krc"]
 size = Vector2(53, 9.75)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufs17"]
+size = Vector2(85, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q72sx"]
+size = Vector2(14, 38)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b4t7k"]
 radius = 96.0
 height = 352.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jokd8"]
+size = Vector2(243, 30)
+
 [node name="Scene1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(-164, -6)
+position = Vector2(998, -156)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -451,7 +460,7 @@ metadata/_edit_group_ = true
 [node name="Panel2" type="Panel" parent="World"]
 offset_left = 281.0
 offset_top = -189.0
-offset_right = 671.0
+offset_right = 526.0
 offset_bottom = -161.0
 metadata/_edit_group_ = true
 
@@ -489,30 +498,6 @@ metadata/_edit_group_ = true
 
 [node name="Floor16" type="Sprite2D" parent="World/Panel2"]
 position = Vector2(220.5, 15)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor17" type="Sprite2D" parent="World/Panel2"]
-position = Vector2(269, 15.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor18" type="Sprite2D" parent="World/Panel2"]
-position = Vector2(318, 14.25)
-scale = Vector2(1.02083, 0.730769)
-texture = ExtResource("6_5sna0")
-region_enabled = true
-region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
-metadata/_edit_group_ = true
-
-[node name="Floor19" type="Sprite2D" parent="World/Panel2"]
-position = Vector2(367, 14.25)
 scale = Vector2(1.02083, 0.730769)
 texture = ExtResource("6_5sna0")
 region_enabled = true
@@ -913,6 +898,29 @@ region_enabled = true
 region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
+[node name="Platform7" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1021, -140)
+shape = SubResource("RectangleShape2D_ufs17")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform7"]
+position = Vector2(-1.99999, -7)
+scale = Vector2(0.97561, 0.948276)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(190.977, 89.3665, 82.3043, 58.6418)
+metadata/_edit_group_ = true
+
+[node name="PTF7smallPillar1" type="CollisionShape2D" parent="Platforms"]
+visible = false
+position = Vector2(988, -143)
+shape = SubResource("RectangleShape2D_q72sx")
+
+[node name="PTF7smallPillar2" type="CollisionShape2D" parent="Platforms"]
+visible = false
+position = Vector2(1051, -142)
+shape = SubResource("RectangleShape2D_q72sx")
+
 [node name="Mobs" type="Node" parent="."]
 
 [node name="MouseEnemy1" parent="Mobs" instance=ExtResource("9_roaak")]
@@ -929,7 +937,7 @@ position = Vector2(582, -21)
 
 [node name="MouseEnemy4" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
-position = Vector2(648, -17)
+position = Vector2(391, -199)
 
 [node name="ElonMusk" parent="Mobs" instance=ExtResource("8_3bsiu")]
 position = Vector2(2022, -56)
@@ -1106,3 +1114,12 @@ texture = ExtResource("11_mn6m8")
 region_enabled = true
 region_rect = Rect2(265, 62, 333, 415.5)
 metadata/_edit_group_ = true
+
+[node name="Top platform" type="StaticBody2D" parent="."]
+position = Vector2(615, -134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top platform"]
+visible = false
+position = Vector2(404.5, -175)
+shape = SubResource("RectangleShape2D_jokd8")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
