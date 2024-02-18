@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=27 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
@@ -38,11 +38,14 @@ size = Vector2(56, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4krc"]
 size = Vector2(53, 9.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufs17"]
-size = Vector2(85, 15.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjfvw"]
+size = Vector2(79.5, 15.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q72sx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6017"]
 size = Vector2(14, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61rti"]
+size = Vector2(70.5, 16)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
 
@@ -504,6 +507,14 @@ region_enabled = true
 region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 metadata/_edit_group_ = true
 
+[node name="Floor17" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
 [node name="Panel5" type="Panel" parent="World"]
 offset_left = 1331.0
 offset_top = -1.0
@@ -907,8 +918,8 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform7" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(1021, -140)
-shape = SubResource("RectangleShape2D_ufs17")
+position = Vector2(874.25, -16)
+shape = SubResource("RectangleShape2D_qjfvw")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform7"]
@@ -919,15 +930,24 @@ region_enabled = true
 region_rect = Rect2(190.977, 89.3665, 82.3043, 58.6418)
 metadata/_edit_group_ = true
 
+[node name="Tileset" type="Sprite2D" parent="Platforms/Platform7"]
+position = Vector2(74.25, -5.87499)
+scale = Vector2(0.935, 0.91)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(181, 83, 100, 75)
+
 [node name="PTF7smallPillar1" type="CollisionShape2D" parent="Platforms"]
-visible = false
-position = Vector2(988, -143)
-shape = SubResource("RectangleShape2D_q72sx")
+position = Vector2(841, -17)
+shape = SubResource("RectangleShape2D_o6017")
 
 [node name="PTF7smallPillar2" type="CollisionShape2D" parent="Platforms"]
-visible = false
-position = Vector2(1051, -142)
-shape = SubResource("RectangleShape2D_q72sx")
+position = Vector2(980, -19)
+shape = SubResource("RectangleShape2D_o6017")
+
+[node name="horizontal" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(948.75, -16)
+shape = SubResource("RectangleShape2D_61rti")
 
 [node name="Mobs" type="Node" parent="."]
 

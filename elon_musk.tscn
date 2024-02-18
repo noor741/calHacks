@@ -5,10 +5,10 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvp0o"]
 radius = 39.0
-height = 120.0
+height = 90.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hofdd"]
-radius = 289.007
+radius = 160.05
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6tq"]
 size = Vector2(91, 96)
