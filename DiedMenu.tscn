@@ -33,4 +33,7 @@ scale = Vector2(2.25781, 2.6625)
 texture = ExtResource("2_jp11l")
 metadata/_edit_lock_ = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 321)
+
 [connection signal="pressed" from="restartButtonMenu" to="." method="_on_restart_button_menu_pressed"]

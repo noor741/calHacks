@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_jk4qw"]
 [ext_resource type="Texture2D" uid="uid://cfwajjnxn23kj" path="res://Rocky Pass Files/PNG/back.png" id="2_4aqex"]
-[ext_resource type="Texture2D" uid="uid://clqxksusnxufd" path="res://MenuLogo.png" id="3_7p8k4"]
+[ext_resource type="Texture2D" uid="uid://c0ti4sexra86w" path="res://logov1.1.png" id="3_ge4b8"]
 [ext_resource type="Texture2D" uid="uid://d0grgqr246gbc" path="res://cat.png" id="4_nhk3t"]
 [ext_resource type="Texture2D" uid="uid://cs6henl7524rh" path="res://MuskyRocket.png" id="5_i33id"]
 
@@ -42,9 +42,9 @@ texture = ExtResource("2_4aqex")
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(220, 200)
+position = Vector2(550, 170)
 scale = Vector2(1, 1.074)
-texture = ExtResource("3_7p8k4")
+texture = ExtResource("3_ge4b8")
 
 [node name="catmenu" type="Sprite2D" parent="."]
 position = Vector2(207, 584)
@@ -61,6 +61,9 @@ offset_top = 477.0
 offset_right = 725.0
 offset_bottom = 597.0
 text = "Credits"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 321)
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

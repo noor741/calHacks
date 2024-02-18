@@ -40,4 +40,7 @@ offset_right = 280.0
 offset_bottom = 607.0
 text = "Back"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(581, 321)
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
