@@ -36,7 +36,7 @@ func _on_kill_the_cat_body_entered(body):
 
 func _on_damage_the_cat_body_entered(body):
 	if body.name == "theCat":
-		body.health -=5
+		body.health -= 2
 		print(body.health)
 
 func death():
