@@ -1442,10 +1442,10 @@ metadata/_edit_lock_ = true
 [node name="MuskyRocket" type="StaticBody2D" parent="."]
 position = Vector2(76, 98)
 script = ExtResource("10_66fwf")
+metadata/_edit_group_ = true
 
 [node name="theRocket" type="CollisionShape2D" parent="MuskyRocket"]
-position = Vector2(2540, -162)
-rotation = 1.5708
+position = Vector2(2559, -203)
 shape = SubResource("CapsuleShape2D_b4t7k")
 metadata/_edit_group_ = true
 
