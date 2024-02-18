@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
-[ext_resource type="Texture2D" uid="uid://1fwhjicgqxep" path="res://cat.png" id="3_nvo70"]
+[ext_resource type="Texture2D" uid="uid://d0grgqr246gbc" path="res://cat.png" id="3_nvo70"]
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://ik4j6ee1135o" path="res://gothicvania church/assets/environment/columns.png" id="5_hxrau"]
 [ext_resource type="Texture2D" uid="uid://82v3aenyda1f" path="res://gothicvania church/assets/environment/tileset.png" id="6_5sna0"]
@@ -963,6 +963,149 @@ region_enabled = true
 region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
+[node name="Platform20" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1636, -38)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform20"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform21" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1703, -76)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform21"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform22" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1639, -115)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform22"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform23" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1707, -154)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform23"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform24" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1804, -191)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform24"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform25" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1904, -193)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform25"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform26" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(2010, -193)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform26"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform27" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(2401, -39)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform27"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform28" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(2336, -81)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform28"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform29" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(2401, -118)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform29"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform30" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(2320, -163)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform30"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
 [node name="Platform15" type="CollisionShape2D" parent="Platforms"]
 position = Vector2(1414, -77)
 shape = SubResource("RectangleShape2D_cbe3r")
@@ -1150,7 +1293,7 @@ z_index = 1
 position = Vector2(391, -199)
 
 [node name="ElonMusk" parent="Mobs" instance=ExtResource("8_3bsiu")]
-position = Vector2(2319, -51)
+position = Vector2(2108, -51)
 
 [node name="background" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_gjxbl")
