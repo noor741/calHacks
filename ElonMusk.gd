@@ -40,3 +40,9 @@ func _on_kill_the_cat_body_entered(body):
 	if body.name == "theCat":
 		body.health -= 5
 		print(body.health)
+
+
+
+func _on_death_by_cat_body_entered(body):
+	if body.name == "theCat":
+		queue_free()
