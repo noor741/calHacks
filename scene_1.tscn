@@ -60,17 +60,13 @@ metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-<<<<<<< HEAD
-position = Vector2(-153, -18)
-=======
-position = Vector2(1447, -196)
->>>>>>> ded757b1e112dc3297aa23dfd6a81924a96c8fce
+position = Vector2(-163, -42)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="theCat"]
 position = Vector2(0, -27)
-offset = Vector2(30, 8)
+offset = Vector2(17, -10)
 zoom = Vector2(5, 5)
 metadata/_edit_group_ = true
 
