@@ -61,7 +61,7 @@ metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(1571, -203)
+position = Vector2(923, -26)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -866,7 +866,7 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform9" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(1193, -69)
+position = Vector2(1186, -58)
 shape = SubResource("RectangleShape2D_cbe3r")
 metadata/_edit_group_ = true
 
@@ -878,8 +878,60 @@ region_enabled = true
 region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
+[node name="Platform13" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1190, -126)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform13"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform14" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1477, -38)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform14"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform15" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1414, -77)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform15"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
+[node name="Platform12" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(1275, -37)
+shape = SubResource("RectangleShape2D_cbe3r")
+metadata/_edit_group_ = true
+
+[node name="Plat2Sprite" type="Sprite2D" parent="Platforms/Platform12"]
+position = Vector2(-4.76837e-07, 0.00624847)
+scale = Vector2(1.74194, 0.386694)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
+metadata/_edit_group_ = true
+
 [node name="Platform10" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(1296, -36)
+position = Vector2(1273, -91)
 shape = SubResource("RectangleShape2D_cbe3r")
 metadata/_edit_group_ = true
 
@@ -892,7 +944,7 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform11" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(1379, -74)
+position = Vector2(1325, -91)
 shape = SubResource("RectangleShape2D_cbe3r")
 metadata/_edit_group_ = true
 
@@ -1022,6 +1074,10 @@ position = Vector2(1098, -14)
 [node name="MouseEnemy6" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
 position = Vector2(1175, -14)
+
+[node name="MouseEnemy7" parent="Mobs" instance=ExtResource("9_roaak")]
+z_index = 1
+position = Vector2(1342, -112)
 
 [node name="MouseEnemy4" parent="Mobs" instance=ExtResource("9_roaak")]
 z_index = 1
