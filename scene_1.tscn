@@ -23,7 +23,7 @@ height = 214.0
 size = Vector2(45, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stgkc"]
-size = Vector2(114, 34)
+size = Vector2(114, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dskmj"]
 size = Vector2(48.75, 13)
@@ -60,7 +60,7 @@ metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(2297, -165)
+position = Vector2(1447, -196)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -178,7 +178,7 @@ metadata/_edit_group_ = true
 
 [node name="top collision" type="CollisionShape2D" parent="World/pillar4"]
 visible = false
-position = Vector2(211, -173)
+position = Vector2(211, -186)
 shape = SubResource("RectangleShape2D_stgkc")
 metadata/_edit_group_ = true
 

@@ -7,8 +7,9 @@
 radius = 39.0
 height = 90.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hofdd"]
-radius = 160.05
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qwfja"]
+radius = 130.0
+height = 408.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6tq"]
 size = Vector2(91, 96)
@@ -17,6 +18,7 @@ size = Vector2(91, 96)
 radius = 19.0263
 
 [node name="ElonMusk" type="CharacterBody2D"]
+position = Vector2(0, -28)
 script = ExtResource("1_6ybsk")
 metadata/_edit_group_ = true
 
@@ -37,7 +39,7 @@ metadata/_edit_group_ = true
 
 [node name="Collision Field" type="CollisionShape2D" parent="CatDetection"]
 visible = false
-shape = SubResource("CircleShape2D_hofdd")
+shape = SubResource("CapsuleShape2D_qwfja")
 metadata/_edit_group_ = true
 
 [node name="KillTheCat" type="Area2D" parent="."]
@@ -54,7 +56,6 @@ metadata/_edit_group_ = true
 visible = false
 position = Vector2(0, -35)
 shape = SubResource("CircleShape2D_1y53j")
-metadata/_edit_group_ = true
 
 [connection signal="body_entered" from="CatDetection" to="." method="_on_cat_detection_body_entered"]
 [connection signal="body_exited" from="CatDetection" to="." method="_on_cat_detection_body_exited"]
