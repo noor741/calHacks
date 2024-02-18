@@ -18,13 +18,14 @@ size = Vector2(43, 14)
 [node name="Scene1" type="Node2D"]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
-position = Vector2(7, -1)
+position = Vector2(-34, -2)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="theCat"]
 position = Vector2(0, -27)
 zoom = Vector2(5, 5)
+metadata/_edit_group_ = true
 
 [node name="CatShape" type="CollisionShape2D" parent="theCat"]
 position = Vector2(20, -11)
@@ -34,20 +35,22 @@ script = ExtResource("1_cn4hv")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="theCat"]
-position = Vector2(29, 4)
+position = Vector2(20, -21)
 scale = Vector2(0.188368, 0.205247)
 texture = ExtResource("3_nvo70")
+region_enabled = true
+region_rect = Rect2(399, 54, 267, 280)
 script = ExtResource("4_6kbvd")
 metadata/_edit_group_ = true
 
 [node name="World" type="StaticBody2D" parent="."]
 
-[node name="boundary" type="CollisionShape2D" parent="World"]
+[node name="Ground" type="CollisionShape2D" parent="World"]
 shape = SubResource("WorldBoundaryShape2D_u7nbe")
 debug_color = Color(0.337255, 0.611765, 0.341176, 0.419608)
 
 [node name="Mouse" type="CharacterBody2D" parent="."]
-position = Vector2(-44, -12)
+position = Vector2(50, -13)
 script = ExtResource("3_gkvk8")
 metadata/_edit_group_ = true
 
