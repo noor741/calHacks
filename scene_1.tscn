@@ -32,12 +32,13 @@ size = Vector2(43, 14)
 [node name="Scene1" type="Node2D"]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
-position = Vector2(-34, -2)
+position = Vector2(-182, -3)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="theCat"]
 position = Vector2(0, -27)
+offset = Vector2(17, 0)
 zoom = Vector2(5, 5)
 metadata/_edit_group_ = true
 
@@ -60,11 +61,12 @@ metadata/_edit_group_ = true
 [node name="World" type="StaticBody2D" parent="."]
 
 [node name="Ground" type="CollisionShape2D" parent="World"]
+visible = false
 shape = SubResource("WorldBoundaryShape2D_u7nbe")
 debug_color = Color(0.337255, 0.611765, 0.341176, 0.419608)
 
 [node name="Pillar1" type="CollisionShape2D" parent="World"]
-position = Vector2(-225, -103.75)
+position = Vector2(-217, -103)
 shape = SubResource("RectangleShape2D_476os")
 
 [node name="Pillar2" type="CollisionShape2D" parent="World"]

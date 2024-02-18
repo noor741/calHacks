@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://cp72k3rs7yons"]
-
-[node name="Scene 2" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-floor_constant_speed = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
