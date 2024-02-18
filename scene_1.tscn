@@ -40,7 +40,7 @@ metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="theCat"]
 position = Vector2(0, -27)
-offset = Vector2(17, 0)
+offset = Vector2(17, -10)
 zoom = Vector2(5, 5)
 metadata/_edit_group_ = true
 
@@ -116,6 +116,78 @@ offset_bottom = 29.0
 z_index = -1
 position = Vector2(18, -92)
 texture = ExtResource("8_6xgkc")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(18, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(526, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1038, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1550, 146)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D17" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2062, 147)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D18" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2574, 148)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(18, -330)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(526, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1033, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1545, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2056, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2568, -331)
+texture = ExtResource("8_6xgkc")
+flip_v = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 z_index = -1
