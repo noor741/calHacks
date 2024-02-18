@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://c08epncnixyfq"]
+[gd_scene load_steps=27 format=3 uid="uid://c08epncnixyfq"]
 
 [ext_resource type="Script" path="res://CatShape.gd" id="1_cn4hv"]
 [ext_resource type="Script" path="res://theCat.gd" id="1_m1adp"]
-[ext_resource type="Texture2D" uid="uid://1fwhjicgqxep" path="res://cat.png" id="3_nvo70"]
+[ext_resource type="Texture2D" uid="uid://d0grgqr246gbc" path="res://cat.png" id="3_nvo70"]
 [ext_resource type="Script" path="res://CatSprite.gd" id="4_6kbvd"]
 [ext_resource type="Texture2D" uid="uid://ik4j6ee1135o" path="res://gothicvania church/assets/environment/columns.png" id="5_hxrau"]
 [ext_resource type="Texture2D" uid="uid://82v3aenyda1f" path="res://gothicvania church/assets/environment/tileset.png" id="6_5sna0"]
@@ -38,11 +38,14 @@ size = Vector2(56, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4krc"]
 size = Vector2(53, 9.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufs17"]
-size = Vector2(85, 15.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjfvw"]
+size = Vector2(79.5, 15.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q72sx"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6017"]
 size = Vector2(14, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61rti"]
+size = Vector2(70.5, 16)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjxbl"]
 
@@ -50,15 +53,15 @@ size = Vector2(14, 38)
 radius = 96.0
 height = 352.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jokd8"]
-size = Vector2(243, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4snw"]
+size = Vector2(243, 20)
 
 [node name="Scene1" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1292.0]
 
 [node name="theCat" type="CharacterBody2D" parent="."]
 z_index = 1
-position = Vector2(1561, -200)
+position = Vector2(-169, -1)
 script = ExtResource("1_m1adp")
 metadata/_edit_group_ = true
 
@@ -458,10 +461,10 @@ region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 metadata/_edit_group_ = true
 
 [node name="Panel2" type="Panel" parent="World"]
-offset_left = 281.0
-offset_top = -189.0
-offset_right = 526.0
-offset_bottom = -161.0
+offset_left = 282.0
+offset_top = -190.0
+offset_right = 527.0
+offset_bottom = -162.0
 metadata/_edit_group_ = true
 
 [node name="Floor12" type="Sprite2D" parent="World/Panel2"]
@@ -497,6 +500,14 @@ region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
 metadata/_edit_group_ = true
 
 [node name="Floor16" type="Sprite2D" parent="World/Panel2"]
+position = Vector2(220.5, 15)
+scale = Vector2(1.02083, 0.730769)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(128.448, 168.804, 48.8094, 39.5524)
+metadata/_edit_group_ = true
+
+[node name="Floor17" type="Sprite2D" parent="World/Panel2"]
 position = Vector2(220.5, 15)
 scale = Vector2(1.02083, 0.730769)
 texture = ExtResource("6_5sna0")
@@ -907,8 +918,8 @@ region_rect = Rect2(49.0678, 34.1576, 31.5578, 31.137)
 metadata/_edit_group_ = true
 
 [node name="Platform7" type="CollisionShape2D" parent="Platforms"]
-position = Vector2(1021, -140)
-shape = SubResource("RectangleShape2D_ufs17")
+position = Vector2(874.25, -16)
+shape = SubResource("RectangleShape2D_qjfvw")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform7"]
@@ -919,15 +930,24 @@ region_enabled = true
 region_rect = Rect2(190.977, 89.3665, 82.3043, 58.6418)
 metadata/_edit_group_ = true
 
+[node name="Tileset" type="Sprite2D" parent="Platforms/Platform7"]
+position = Vector2(74.25, -5.87499)
+scale = Vector2(0.935, 0.91)
+texture = ExtResource("6_5sna0")
+region_enabled = true
+region_rect = Rect2(181, 83, 100, 75)
+
 [node name="PTF7smallPillar1" type="CollisionShape2D" parent="Platforms"]
-visible = false
-position = Vector2(988, -143)
-shape = SubResource("RectangleShape2D_q72sx")
+position = Vector2(841, -17)
+shape = SubResource("RectangleShape2D_o6017")
 
 [node name="PTF7smallPillar2" type="CollisionShape2D" parent="Platforms"]
-visible = false
-position = Vector2(1051, -142)
-shape = SubResource("RectangleShape2D_q72sx")
+position = Vector2(980, -19)
+shape = SubResource("RectangleShape2D_o6017")
+
+[node name="horizontal" type="CollisionShape2D" parent="Platforms"]
+position = Vector2(948.75, -16)
+shape = SubResource("RectangleShape2D_61rti")
 
 [node name="Mobs" type="Node" parent="."]
 
@@ -1094,18 +1114,6 @@ position = Vector2(2574, -92)
 texture = ExtResource("8_6xgkc")
 metadata/_edit_lock_ = true
 
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="HealthPoints" type="Label" parent="UI"]
-offset_left = -237.0
-offset_top = -187.0
-offset_right = -197.0
-offset_bottom = -159.0
-theme_override_colors/font_color = Color(0.960784, 0.960784, 0.960784, 1)
-theme_override_font_sizes/font_size = 20
-text = "HP:"
-script = ExtResource("8_6ri86")
-
 [node name="MuskyRocket" type="StaticBody2D" parent="."]
 position = Vector2(48, 103)
 metadata/_edit_group_ = true
@@ -1124,26 +1132,19 @@ region_rect = Rect2(265, 62, 333, 415.5)
 metadata/_edit_group_ = true
 
 [node name="Top platform" type="StaticBody2D" parent="."]
-position = Vector2(615, -134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top platform"]
-visible = false
-position = Vector2(404.5, -175)
-shape = SubResource("RectangleShape2D_jokd8")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
+position = Vector2(404.5, -180)
+shape = SubResource("RectangleShape2D_s4snw")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -150.0
-offset_top = -162.0
-offset_right = 18.0
-offset_bottom = -122.0
-metadata/_edit_group_ = true
+[node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Meowdy, Pardner!"
-metadata/_edit_group_ = true
+[node name="HealthPoints" type="Label" parent="UI"]
+offset_left = -256.0
+offset_top = -94.0
+offset_right = -216.0
+offset_bottom = -66.0
+theme_override_colors/font_color = Color(0.960784, 0.960784, 0.960784, 1)
+theme_override_font_sizes/font_size = 20
+text = "HP:"
+script = ExtResource("8_6ri86")
