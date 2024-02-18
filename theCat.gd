@@ -27,6 +27,6 @@ func _physics_process(delta):
 		
 	if health <= 0:
 		queue_free()
-		#get_tree().change_scene_to_file() #must add scene
+		get_tree().change_scene_to_file("res://DiedMenu.tscn")
 
 	move_and_slide()
