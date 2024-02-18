@@ -4,6 +4,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var theCat
 var chase = false
 var SPEED = 150
+var jump_timer = 0
+var jump_interval_min = 0.5  
+var jump_interval_max = 1.0
 
 func _physics_process(delta):
 	# gravity for Elon Musk
@@ -27,3 +30,7 @@ func _on_cat_detection_body_entered(body):
 func _on_cat_detection_body_exited(body):
 	if body.name == "theCat":
 		chase = false
+
+func jump():
+	velocity.y -= 500  
+	jump_timer = randf_range(jump_interval_min, jump_interval_max)

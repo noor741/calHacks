@@ -948,7 +948,7 @@ z_index = 1
 position = Vector2(391, -199)
 
 [node name="ElonMusk" parent="Mobs" instance=ExtResource("8_3bsiu")]
-position = Vector2(2022, -56)
+position = Vector2(2319, -51)
 
 [node name="background" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_gjxbl")
