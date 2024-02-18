@@ -1,8 +1,33 @@
-[gd_scene format=3 uid="uid://buk37r4j215mr"]
+[gd_scene load_steps=5 format=3 uid="uid://buk37r4j215mr"]
+
+[ext_resource type="Script" path="res://DaCat.gd" id="1_a0ibw"]
+[ext_resource type="Texture2D" uid="uid://d0grgqr246gbc" path="res://cat.png" id="2_l3whc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1pqfy"]
+radius = 19.5557
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6udjc"]
 
 [node name="Scene 2" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="DaCat" type="CharacterBody2D" parent="."]
 floor_constant_speed = true
+script = ExtResource("1_a0ibw")
+
+[node name="Camera2D" type="Camera2D" parent="DaCat"]
+zoom = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DaCat"]
+position = Vector2(-49, -9)
+scale = Vector2(0.32, 0.36)
+shape = SubResource("CircleShape2D_1pqfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="DaCat"]
+position = Vector2(-43, 2)
+scale = Vector2(0.128472, 0.126157)
+texture = ExtResource("2_l3whc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_6udjc")

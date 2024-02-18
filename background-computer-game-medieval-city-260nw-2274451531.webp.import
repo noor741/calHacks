@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0grgqr246gbc"
-path="res://.godot/imported/cat.png-d389335c1c7006e0460b77c11cf92d79.ctex"
+uid="uid://bl4jerqgqsatb"
+path="res://.godot/imported/background-computer-game-medieval-city-260nw-2274451531.webp-4ba9f6e3fdf9438699e7940e64b7ebf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat.png"
-dest_files=["res://.godot/imported/cat.png-d389335c1c7006e0460b77c11cf92d79.ctex"]
+source_file="res://background-computer-game-medieval-city-260nw-2274451531.webp"
+dest_files=["res://.godot/imported/background-computer-game-medieval-city-260nw-2274451531.webp-4ba9f6e3fdf9438699e7940e64b7ebf5.ctex"]
 
 [params]
 

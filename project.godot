@@ -11,10 +11,7 @@ config_version=5
 [application]
 
 config/name="calHacks"
-<<<<<<< HEAD
 run/main_scene="res://scene_2.tscn"
-=======
-run/main_scene="res://scene_1.tscn"
->>>>>>> 51942f4401bb5498db9023ec87be60e50ffac6e3
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="res://scene_2.tscn"
